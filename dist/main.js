@@ -149,13 +149,14 @@ function wireUI() {
         try { const obj = JSON.parse(programStr); programStr = JSON.stringify(obj); } catch (_) { /* keep raw */ }
         const label = 'My Tank AI (Red)';
         const tags = '#KGNINJA #KOMESAITO';
-        let tweet = `${label}\n${programStr}\n${tags}`;
+        const urlLink = 'https://kg-ninja.github.io/KOMESAITO/';
+        let tweet = `${label}\n${programStr}\n${tags}\n${urlLink}`;
         const MAX = 280;
         if (tweet.length > MAX) {
-          const overhead = (label.length + 1 /*\n*/ + 1 /*\n*/ + tags.length);
+          const overhead = (label.length + 1 /*\n*/ + 1 /*\n*/ + tags.length + 1 /*\n*/ + urlLink.length);
           const room = Math.max(0, MAX - overhead - 1); // for ellipsis
           const shortened = programStr.slice(0, room) + '…';
-          tweet = `${label}\n${shortened}\n${tags}`;
+          tweet = `${label}\n${shortened}\n${tags}\n${urlLink}`;
         }
         const url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(tweet);
         window.open(url, '_blank', 'noopener,noreferrer');
