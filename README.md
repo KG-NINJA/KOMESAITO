@@ -53,3 +53,5 @@ Simple browser MVP inspired by PC-8801 "COMSIGHT": two tanks on a 16x16 grid, Ca
 
 ## ライセンス / クレジット
 - デモ目的。オリジナル COMSIGHT とは無関係です。
+
+- 寄付、ご支援よろしくおねがいいたします。https://buymeacoffee.com/kgninja
